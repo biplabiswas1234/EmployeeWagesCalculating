@@ -1,1 +1,1 @@
-# EmployeeWagesCalculating
+Welcome to Wages calculation
