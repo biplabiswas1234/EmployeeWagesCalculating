@@ -1,45 +1,37 @@
 ﻿using System;
 
-namespace PracticeProblem1
+namespace EmployeeWagesUsingSwitchCase
 {
-    public class Program
+    internal class Program
     {
-        public int EmpPresent = 1;
-        public int FullTimeEmp = 1;
-        public int FullDayHour = 8;
-        public int PartTimeHour = 4;
+        public int EmpHour = 0;
         public int WagesPerHour = 20;
-        public void CheckEmpPresentAbsent()
+        public const int IsFullTime = 1;
+        public const int IsPartTime = 2;
+        public int EmployeeWages()
         {
-            Random Check = new Random();
-            int CheckEmp = Check.Next(0, 2);
-            if (EmpPresent == CheckEmp)
+            Random EmpType = new Random();
+            int EmpCheck = EmpType.Next(0, 3);
+            switch (EmpCheck)
             {
-                Console.WriteLine("Employee is present");
-                Random TimeCheck = new Random();
-                int CheckTimeEmp = TimeCheck.Next(0, 2);
-                if (FullTimeEmp == CheckTimeEmp)
-                {
-                    Console.WriteLine("Employee is FullTimeEmp");
-                    int DailyWages = FullDayHour * WagesPerHour;
-                    Console.WriteLine("DailyWages: " + DailyWages);
-                }
-                else
-                {
-                    Console.WriteLine("Employee is PartTimeEmp");
-                    int DailyWages1 = PartTimeHour * WagesPerHour;
-                    Console.WriteLine("DailyWages: " + DailyWages1);
-                }
+                case IsFullTime:
+                    EmpHour = 8;
+                    break;
+                case IsPartTime:
+                    EmpHour = 4;
+                    break;
+                default:
+                    EmpHour = 0;
+                    break;
             }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-            }
+            int EmployeeWages = EmpHour * WagesPerHour;
+            return EmployeeWages;
         }
+
         static void Main(string[] args)
         {
-            Program prg = new Program();
-            prg.CheckEmpPresentAbsent();
+            Program wages = new Program();
+            Console.WriteLine("wages:" + wages.EmployeeWages());
         }
     }
 }
