@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Day3PracticeProblem1UC4
+namespace WagesCalculation
 {
     internal class Program
     {
@@ -10,9 +10,10 @@ namespace Day3PracticeProblem1UC4
         public const int IsPartTime = 2;
         public int EmployeeDay = 1;
         public int TotalWages = 0;
+        public int TotalHours = 0;
         public int EmployeeWages()
         {
-            while (EmployeeDay <= 20)
+            while (EmployeeDay <= 20 || TotalHours <= 100)
             {
                 Random EmpType = new Random();
                 int EmpCheck = EmpType.Next(0, 3);
@@ -28,11 +29,12 @@ namespace Day3PracticeProblem1UC4
                         EmpHour = 0;
                         break;
                 }
-
-                int EmpWages = EmpHour * WagesPerHour;
-                TotalWages += EmpWages;
-                EmployeeDay++;
-
+                
+                    int EmpWages = EmpHour * WagesPerHour;
+                    TotalWages += EmpWages;
+                    TotalHours += EmpHour;
+                    EmployeeDay++;
+                }
             }
             return TotalWages;
         }
