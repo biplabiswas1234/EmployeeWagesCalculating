@@ -74,8 +74,8 @@ namespace EmployeeWageComputation
             }
             CompanyWage_Computation employeeWageComputation = new CompanyWage_Computation();
             employeeWageComputation.TotalWage = TotalWage;
-            Console.WriteLine("The Name of the Company : " + CompanyName);
-            Console.WriteLine("Total Working Days :" + DayNumber + "  " + "Total Working Hours :" + TotalWorkHrs + " " + "Total Employee Wage :" + TotalWage);
+            Console.WriteLine("The Name of the Company  : " + CompanyName);
+            Console.WriteLine("Total Working Days  :" + DayNumber + "  " + "Total Working Hours :" + TotalWorkHrs + " " + "Total Employee Wage :" + TotalWage);
 
         }
     }
