@@ -15,7 +15,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("6: for Employee Wages for hours and days in a month");
             Console.WriteLine("7: for Employee Wage Method");
             Console.WriteLine("8: for Company wage using dictionary");
-            Console.WriteLine("9: for Total company wage");
+            
 
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
