@@ -20,6 +20,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("11: for Multiple company total wages using Interface");
             Console.WriteLine("12: for Multiple company total wages using Interface and ArrayList");
             Console.WriteLine("13: for Multiple company total wages and daily wages using Interface & ArrayList");
+            Console.WriteLine("14: for Get total and daily wages by searching company name");
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
             {
@@ -104,6 +105,18 @@ namespace EmployeeWageComputation
                     computations.AddCompany("HONDA", 20, 9, 5, 150, 20);
                     computations.WageCalculation("honda");
                     computations.ViewWage();
+                    break;
+                case 14:
+                    CompanyWages_Computations compute = new CompanyWages_Computations();
+                    compute.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    compute.WageCalculation("tata");
+                    compute.AddCompany("MAHINDRA", 30, 8, 4, 200, 20);
+                    compute.WageCalculation("mahindra");
+                    compute.AddCompany("HONDA", 20, 9, 5, 150, 20);
+                    compute.WageCalculation("honda");
+                    Console.WriteLine("Enter correct Company name");
+                    string CompanyName=Console.ReadLine();
+                    compute.ViewWage(CompanyName);
                     break;
                 default:
                     Console.WriteLine("Please enter a correct number!");
