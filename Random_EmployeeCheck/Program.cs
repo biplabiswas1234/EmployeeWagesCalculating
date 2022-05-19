@@ -18,6 +18,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("9: for Total company wage");
             Console.WriteLine("10: for Multiple company total wages");
             Console.WriteLine("11: for Multiple company total wages using Interface");
+            Console.WriteLine("12: for Multiple company total wages using Interface and ArrayList");
             int Check = Convert.ToInt32(Console.ReadLine());
             switch (Check)
             {
@@ -82,6 +83,16 @@ namespace EmployeeWageComputation
                     wagecompute.AddCompany("HONDA", 20, 9, 5, 150, 20);
                     wagecompute.WageCalculation("honda");
                     wagecompute.ViewWage();
+                    break;
+                case 12:
+                    Wages_Computation wages_Computation = new Wages_Computation();
+                    wages_Computation.AddCompany("TATA", 20, 8, 4, 100, 20);
+                    wages_Computation.WageCalculation("tata");
+                    wages_Computation.AddCompany("MAHINDRA", 30, 8, 4, 200, 20);
+                    wages_Computation.WageCalculation("mahindra");
+                    wages_Computation.AddCompany("HONDA", 20, 9, 5, 150, 20);
+                    wages_Computation.WageCalculation("honda");
+                    wages_Computation.ViewWage();
                     break;
                 default:
                     Console.WriteLine("Please enter a correct number!");
