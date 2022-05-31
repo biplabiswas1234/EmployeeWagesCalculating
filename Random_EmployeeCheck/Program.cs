@@ -22,7 +22,6 @@ namespace EmployeePresentAbsent
             else
             {
                 Console.WriteLine("Employee is Absent");
-                Console.WriteLine("Employee has no wages");
             }
         }
         public static void Main(string[] args)
